@@ -1,0 +1,184 @@
+!DOCTYPE html>
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>OnlyAccess - Plataforma Exclusiva</title>
+code
+Código
+<link rel="preload" as="image" href="https://i.imgur.com/vj5uKAI.jpeg">
+<link rel="preload" as="image" href="https://i.imgur.com/Q8B3fn0.jpeg">
+<link rel="preload" as="image" href="https://i.imgur.com/YQjQL5h.jpeg">
+
+<style>
+    /* style.css - Diseño Monolítico con Collage */
+
+    :root {
+        /* Variables de Color del Diseño Minimalista (para el botón) */
+        --bg-color-primary: #FFFFFF; 
+        --text-color-dark: #1A1A1A; 
+        --text-color-light: #555555; 
+        
+        /* Variables de Access (Azules para el botón/corazón) */
+        --access-blue: #0081FF;     
+        --access-cyan: #56CCF2;    
+        --access-light-blue: #C0E8F8; 
+        --access-gradient-start: var(--access-blue); 
+        --access-gradient-end: #4C9AFF; 
+        
+        --heart-color: var(--access-blue); 
+        --main-width: 330px; 
+        
+        /* Variables del Fondo */
+        --bg-color-fallback: #080808; 
+        --overlay-color: rgba(0, 0, 0, 0.6); 
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+        background-color: var(--bg-color-fallback);
+        color: var(--text-color-dark);
+        min-height: 100vh; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Se ajusta con center-screen */
+        text-align: center;
+        position: relative;
+        overflow-x: hidden; 
+    }
+
+    /* 🟢 Estilos para el Centrado Vertical */
+    .center-screen {
+        flex-grow: 1; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        width: 100%;
+    }
+
+    /* CONTENEDOR DE FONDO (COLLAGE) */
+    .collage-container {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2; 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 0px; 
+    }
+    .collage-container::before {
+        content: '';
+        position: absolute; 
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--overlay-color); 
+        z-index: 1; 
+    }
+    .collage-img {
+        width: 100%;    
+        height: 100%;   
+        object-fit: cover; 
+        opacity: 1;     
+        display: block;   
+    }
+    .img-1 { object-position: center 95%; }
+    .img-2 { object-position: bottom center; }
+    .img-3 { object-position: center 85%; }
+
+
+    /* Contenedor Principal (Donde está el texto y botón) */
+    .main-content {
+        background-color: transparent !important;
+        box-shadow: none !important; 
+        padding: 0;
+        width: var(--main-width);
+        max-width: 90%; 
+        z-index: 2; 
+        text-align: center;
+    }
+
+    /* --- Tipografía y Elementos de Interfaz --- */
+    .heart-icon { 
+        font-size: 4rem; 
+        color: var(--heart-color); 
+        margin-bottom: 5px; 
+        text-shadow: 0 0 15px rgba(0, 129, 255, 0.4); 
+    }
+    .main-logo-pill {
+        padding: 8px 15px;
+        background-color: var(--access-light-blue);
+        color: var(--text-color-dark);
+        font-size: 1.5rem;
+        font-weight: 700;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+    .subtitle { 
+        font-size: 1rem; 
+        color: var(--text-color-light); 
+        margin-bottom: 30px; 
+        padding: 0 10px;
+    }
+
+    /* --- Botones --- */
+    .btn { 
+        width: 100%; 
+        padding: 14px 25px; 
+        border-radius: 10px; 
+        text-decoration: none;
+        font-size: 1.1rem; 
+        font-weight: 600; 
+        border: none; 
+        cursor: pointer;
+        display: block;
+        margin-top: 20px;
+    }
+    .primary-btn { 
+        background: linear-gradient(to right, var(--access-gradient-start), var(--access-gradient-end)); 
+        color: white; 
+        box-shadow: 0 4px 15px rgba(0, 129, 255, 0.4); 
+    }
+</style>
+</head> 
+<body>
+code
+Código
+<div class="collage-container">
+    <img src="https://i.imgur.com/vj5uKAI.jpeg" class="collage-img img-1" alt="Modelo 1">
+    <img src="https://i.imgur.com/Q8B3fn0.jpeg" class="collage-img img-2" alt="Modelo 2">
+    <img src="https://i.imgur.com/YQjQL5h.jpeg" class="collage-img img-3" alt="Modelo 3">
+</div>
+
+<div class="center-screen"> 
+    <div class="main-content">
+        <div class="welcome-content" id="welcome-section">
+            <span class="heart-icon">💙</span>
+            <span class="main-logo-pill">access</span>
+            
+            <p class="subtitle">Tu plataforma exclusiva para conectar con tus creadores favoritos.</p>
+            
+            <a 
+                href="https://customer.aplazo.mx/login/credentials?utm_source=Google_Ads,adwords&utm_medium=Paid,ppc&utm_campaign=Search,Aplazo%20Search%20BRAND&utm_term=aplazo&hsa_acc=2090944242&hsa_cam=15195384408&hsa_grp=131203926444&hsa_ad=559844159171&hsa_src=g&hsa_tgt=kwd-322704893716&hsa_kw=aplazo&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=15195384408&gbraid=0AAAAABJZ-dSKXbvTVywVQoUB9oRDsgCBW&gclid=Cj0KCQjw9czHBhCyARIsAFZlN8Qg-C_XK8hoKy1t-YRDjdp4Dzl-pqqhTXZGx8va1LZLE4MvxxgVXOUaAqt5EALw_wcB"
+                class="btn primary-btn"
+                id="login-button"
+                target="_self" 
+            >
+                Iniciar Sesión / Registrarse
+            </a>
+        </div>
+    </div>
+</div>
+</body> 
+</html>
